@@ -1,0 +1,127 @@
+<a href="#conteudo" class="skip-link">Saltar para o conteúdo</a>
+<header class="header" [class.menu-open]="menuOpen()">
+  <div class="header-inner">
+    <a href="#inicio" class="brand" aria-label="Sky Energy — página inicial" (click)="closeMenu()">
+      <span class="brand-emblem" aria-hidden="true"><svg viewBox="0 0 50 50" fill="none"><path d="M8 26.5 29 6l-4 17h17L21 45l5-18.5H8Z" fill="currentColor"/></svg></span>
+      <span class="brand-text"><strong>sky<span>energy</span></strong><small>ENERGIA COM CLAREZA</small></span>
+    </a>
+    <nav id="principal" class="nav" aria-label="Navegação principal" [class.nav-open]="menuOpen()">
+      <a href="#sobre" (click)="closeMenu()">A Sky Energy</a>
+      <a href="#servicos" (click)="closeMenu()">Soluções</a>
+      <a href="#para-quem" (click)="closeMenu()">Para quem</a>
+      <a href="#como-funciona" (click)="closeMenu()">Como funciona</a>
+      <a href="#perguntas" (click)="closeMenu()">FAQ</a>
+      <a href="#pedir-analise" class="nav-mobile-cta" (click)="closeMenu()">Pedir análise <span aria-hidden="true">↗</span></a>
+    </nav>
+    <a href="#pedir-analise" class="header-cta">Analisar a minha fatura <span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" type="button" [attr.aria-expanded]="menuOpen()" aria-controls="principal" [attr.aria-label]="menuOpen() ? 'Fechar menu' : 'Abrir menu'" (click)="menuOpen.set(!menuOpen())"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section id="inicio" class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="dot"></span> ANÁLISE DE ENERGIA · PARTICULARES &amp; EMPRESAS</div>
+      <h1 id="hero-title">A sua energia<br>merece uma<br><em>segunda leitura<span class="hero-point">.</span></em></h1>
+      <p class="hero-description">Perceba o que está por trás da sua fatura. Analisamos consumos, preços e condições contratuais para ajudar a tomar decisões com mais informação.</p>
+      <div class="hero-actions">
+        <a href="#pedir-analise" class="button button-dark">Pedir análise da fatura <span class="button-icon" aria-hidden="true">↗</span></a>
+        <a href="#como-funciona" class="link-arrow">Descobrir como funciona <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-trust"><span class="tiny-spark" aria-hidden="true">✳</span><p>Não olhamos apenas para um valor.<br><strong>Olhamos para o contexto.</strong></p><span class="trust-tag">SKY / 01</span></div>
+    </div>
+    <div class="hero-art" aria-label="Ilustração conceptual de leitura e análise de faturas de energia">
+      <div class="art-topline"><span><i></i> ENERGIA, SEM COMPLICAÇÕES.</span><span>SE / ANALYSIS 01</span></div>
+      <div class="art-orbit art-orbit-one" aria-hidden="true"></div><div class="art-orbit art-orbit-two" aria-hidden="true"></div>
+      <div class="energy-sigil" aria-hidden="true"><svg viewBox="0 0 260 260" fill="none"><circle cx="130" cy="130" r="98" stroke="currentColor" stroke-opacity=".32"/><circle cx="130" cy="130" r="70" stroke="currentColor" stroke-opacity=".24"/><path d="M69 132h45l27-45-12 45h63l-82 69 17-49H69Z" fill="currentColor"/></svg></div>
+      <div class="reading-card" aria-hidden="true">
+        <div class="reading-head"><span>LEITURA ENERGÉTICA</span><span class="reading-head-icon">↗</span></div>
+        <div class="reading-label">O que analisamos?</div>
+        <div class="reading-row"><span>Consumo</span><div class="reading-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="reading-row"><span>Preços</span><div class="reading-bars bars-two"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="reading-row"><span>Condições</span><div class="reading-bars bars-three"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="reading-foot">INFORMAÇÃO CLARA <span>↗</span></div>
+      </div>
+      <div class="art-quote"><span>ENTENDER</span><span>COMPARAR</span><strong>DECIDIR.</strong></div>
+      <div class="art-bottomline"><span>CLAREZA PARA DECIDIR</span><span>VISUALIZAÇÃO CONCEPTUAL</span></div>
+    </div>
+  </section>
+
+  <div class="ribbon" aria-hidden="true">
+    <div class="ribbon-track">
+      @for(group of [0,1]; track group) {
+        <div class="ribbon-group">
+          @for(item of [0,1,2,3,4,5,6,7,8,9,10,11]; track item) {
+            <span class="ribbon-item">CONSUMO <i>✳</i> PREÇOS <i>✳</i> CONTRATOS <i>✳</i> CLAREZA <i>✳</i></span>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+  <section id="sobre" class="about section-space">
+    <div class="about-side" seReveal><span class="section-label"><b>01</b> / A SKY ENERGY</span><div class="vertical-note"><span>UMA VISÃO MAIS CLARA</span><span>↗</span></div></div>
+    <div class="about-main" seReveal><h2>Às vezes, a melhor energia<br>é <em>perceber melhor.</em></h2><div class="about-content"><p class="about-lead">A fatura de energia reúne mais informação do que aquela que vemos à primeira vista.</p><div><p>Na Sky Energy, ajudamos a interpretar consumos, preços e condições associadas ao fornecimento de eletricidade e gás. O ponto de partida é simples: compreender a situação antes de avaliar os próximos passos.</p><a href="#servicos" class="text-link">Conhecer as soluções <span aria-hidden="true">↗</span></a></div></div></div>
+  </section>
+
+  <section id="servicos" class="services section-space">
+    <div class="section-intro" seReveal><div><span class="section-label"><b>02</b> / SOLUÇÕES</span><h2>Informação que faz<br><em>a diferença.</em></h2></div><p>Quatro pontos de análise para perceber melhor a sua relação com a energia — sem complicar aquilo que deve ser simples.</p></div>
+    <div class="services-grid">
+      @for(service of services; track service.id) {
+        <article class="service-card" seReveal [class.service-expanded]="expandedService() === service.id">
+          <div class="service-top"><span>{{service.index}} / 04</span><span class="service-icon" aria-hidden="true">
+            @switch(service.icon){
+              @case('file'){<svg viewBox="0 0 48 48"><path d="M11 5h19l8 8v29H11zM30 5v9h8M17 22h15M17 29h15M17 36h10"/></svg>}
+              @case('swap'){<svg viewBox="0 0 48 48"><path d="M7 15h33M33 8l7 7-7 7M41 33H8M15 26l-7 7 7 7"/></svg>}
+              @case('activity'){<svg viewBox="0 0 48 48"><path d="M5 27h8l6-15 9 27 7-15h8"/></svg>}
+              @case('scale'){<svg viewBox="0 0 48 48"><path d="M24 7v35M10 16h28M15 16l-9 14h18l-9-14ZM33 16l-9 14h18l-9-14ZM13 42h22"/></svg>}
+            }
+          </span></div>
+          <div class="service-body"><h3>{{service.title}}</h3><p>{{service.short}}</p></div>
+          <button class="service-toggle" type="button" [attr.aria-expanded]="expandedService() === service.id" [attr.aria-controls]="'service-detail-'+service.id" (click)="toggleService(service.id)">O que inclui <span aria-hidden="true">{{expandedService() === service.id ? '−' : '+'}}</span></button>
+          <div class="service-details" [class.open]="expandedService() === service.id" [id]="'service-detail-'+service.id" [attr.aria-hidden]="expandedService() !== service.id"><div class="service-details-inner"><ul>@for(item of service.points; track item){<li>{{item}}</li>}</ul></div></div>
+          <button class="service-bottom" type="button" (click)="startAnalysis(undefined,service)"><span>Falar sobre este serviço</span><span aria-hidden="true">↗</span></button>
+        </article>
+      }
+    </div>
+    <p class="services-note" seReveal>O enquadramento da análise e a informação necessária são confirmados de acordo com cada situação.</p>
+  </section>
+
+  <section class="manifesto"><div class="manifesto-index" seReveal><span>SKY ENERGY / O NOSSO PONTO DE PARTIDA</span><span aria-hidden="true">✳</span></div><h2 seReveal>Uma boa decisão<br>começa com uma<br><em>pergunta certa.</em></h2><div class="manifesto-bottom" seReveal><span>CONSUMOS. PREÇOS. CONDIÇÕES.</span><p>Conhecer os detalhes é o primeiro passo para olhar para a energia com outra perspetiva.</p><span aria-hidden="true">↗</span></div></section>
+
+  <section id="para-quem" class="audiences section-space">
+    <div class="section-intro" seReveal><div><span class="section-label"><b>03</b> / PARA QUEM</span><h2>Cada realidade.<br><em>A sua energia.</em></h2></div><p>Da fatura de casa às necessidades de uma empresa, começamos pelo que realmente importa no seu caso.</p></div>
+    <div class="audience-grid">
+      <article class="audience-card audience-home" seReveal><div class="audience-visual"><span>01 / 02</span><svg viewBox="0 0 300 190" fill="none" aria-hidden="true"><path d="M41 112 150 31l109 81v69H41v-69Z" stroke="currentColor" stroke-width="1.5"/><path d="M101 181v-57h98v57M21 117 150 20l129 97M142 130h16v-20h-16z" stroke="currentColor" stroke-width="1.5"/><circle cx="232" cy="42" r="18" stroke="currentColor"/></svg><span>CASA / ENERGIA</span></div><div class="audience-content"><span class="audience-eyebrow">PARTICULARES</span><h3>Para a sua casa, mais clareza.</h3><p>Ajuda a interpretar a fatura, compreender custos e esclarecer condições do fornecimento doméstico.</p><button type="button" (click)="startAnalysis('Particular')">Analisar como particular <span aria-hidden="true">↗</span></button></div></article>
+      <article class="audience-card audience-business" seReveal><div class="audience-visual"><span>02 / 02</span><svg viewBox="0 0 300 190" fill="none" aria-hidden="true"><path d="M61 180V48l90-32v164M151 180V75l89 34v71M31 180h239M84 76h20M84 99h20M84 122h20M84 145h20M171 108h15M210 121h15M171 138h15M210 151h15M119 180v-26h16v26" stroke="currentColor" stroke-width="1.5"/></svg><span>EMPRESA / ANÁLISE</span></div><div class="audience-content"><span class="audience-eyebrow">EMPRESAS</span><h3>Para o seu negócio, mais contexto.</h3><p>Uma leitura organizada de faturas, contratos e consumos para apoiar decisões associadas à atividade.</p><button type="button" (click)="startAnalysis('Empresa')">Analisar como empresa <span aria-hidden="true">↗</span></button></div></article>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="method section-space"><div class="method-head" seReveal><span class="section-label light"><b>04</b> / COMO FUNCIONA</span><h2>Simples no início.<br><em>Útil em cada passo.</em></h2><p>Um processo claro, com espaço para as perguntas certas.</p></div><div class="method-grid">
+    <article seReveal><div class="method-step-top"><span>01</span><span aria-hidden="true">↗</span></div><h3>Conte-nos o que precisa.</h3><p>Preencha o pedido com os seus dados e indique o tipo de análise pretendida.</p></article>
+    <article seReveal><div class="method-step-top"><span>02</span><span aria-hidden="true">✳</span></div><h3>Olhamos para o contexto.</h3><p>A equipa confirma os dados necessários e analisa a informação relevante.</p></article>
+    <article seReveal><div class="method-step-top"><span>03</span><span aria-hidden="true">→</span></div><h3>Esclarecemos os próximos passos.</h3><p>Receba orientação sobre os custos e condições analisados, de acordo com o seu caso.</p></article>
+  </div></section>
+
+  <section id="perguntas" class="faq section-space"><div class="faq-intro" seReveal><span class="section-label"><b>05</b> / PERGUNTAS FREQUENTES</span><h2>As perguntas<br><em>fazem parte.</em></h2><p>Respostas simples para começar com mais confiança.</p><a href="#pedir-analise" class="text-link">Ainda tem dúvidas? Fale connosco <span aria-hidden="true">↗</span></a></div><div class="faq-list" seReveal>
+    @for(faq of faqs; track faq.question; let idx=$index){<article class="faq-item" [class.faq-open]="expandedFaq() === idx"><h3><button type="button" [id]="'faq-q-'+idx" [attr.aria-expanded]="expandedFaq() === idx" [attr.aria-controls]="'faq-a-'+idx" (click)="toggleFaq(idx)"><span class="faq-number">0{{idx+1}}</span><span>{{faq.question}}</span><span class="faq-mark" aria-hidden="true">+</span></button></h3><div class="faq-answer" [id]="'faq-a-'+idx" role="region" [attr.aria-labelledby]="'faq-q-'+idx" [attr.aria-hidden]="expandedFaq() !== idx"><div class="faq-answer-inner"><p>{{faq.answer}}</p></div></div></article>}
+  </div></section>
+
+  <section id="pedir-analise" class="contact section-space" aria-labelledby="contact-title"><div class="contact-wrap"><div class="contact-copy" seReveal><span class="section-label light"><b>06</b> / VAMOS CONVERSAR</span><h2 id="contact-title">Dê o primeiro<br>passo para <em>perceber.</em></h2><p>Envie-nos o seu pedido e diga-nos o que gostaria de analisar. A equipa da Sky Energy entrará em contacto pelos dados indicados.</p><div class="contact-points"><div><span>01 /</span> Sem compromissos de poupança</div><div><span>02 /</span> Um pedido adaptado ao seu perfil</div><div><span>03 /</span> Informação antes da decisão</div></div><span class="contact-signature">SKY ENERGY · CLAREZA EM CADA ESCOLHA</span></div>
+  <div class="contact-form-box" seReveal><div class="form-header"><div><span>PEDIDO DE ANÁLISE</span><h3>Vamos começar?</h3></div><span aria-hidden="true">↗</span></div>
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate aria-label="Pedir análise à Sky Energy">
+    <div class="form-honeypot" aria-hidden="true"><label>Não preencher<input type="text" formControlName="bot-field" tabindex="-1" autocomplete="off"></label></div>
+    <div class="form-field"><label for="name">Nome completo <span>*</span></label><input id="name" type="text" formControlName="name" autocomplete="name" placeholder="O seu nome" [attr.aria-invalid]="form.controls.name.touched && form.controls.name.invalid" />@if(form.controls.name.touched && form.controls.name.invalid){<small class="field-error">Indique um nome com pelo menos dois caracteres.</small>}</div>
+    <div class="form-row"><div class="form-field"><label for="email">Email <span>*</span></label><input id="email" type="email" formControlName="email" autocomplete="email" placeholder="nome@exemplo.pt" [attr.aria-invalid]="form.controls.email.touched && form.controls.email.invalid" />@if(form.controls.email.touched && form.controls.email.invalid){<small class="field-error">Indique um email válido.</small>}</div><div class="form-field"><label for="phone">Telemóvel @if(form.controls.contactPreference.value === 'Telefone'){<span>*</span>}@else{<span class="optional">(opcional)</span>}</label><input id="phone" type="tel" formControlName="phone" autocomplete="tel" placeholder="9XX XXX XXX" [attr.aria-invalid]="form.controls.phone.touched && form.controls.phone.invalid" />@if(form.controls.phone.touched && form.controls.phone.invalid){<small class="field-error">Indique um contacto telefónico para receber uma chamada.</small>}</div></div>
+    <div class="form-row"><div class="form-field"><label for="customerType">Sou <span>*</span></label><select id="customerType" formControlName="customerType"><option value="Particular">Particular</option><option value="Empresa">Empresa</option></select></div><div class="form-field"><label for="energyType">Energia a analisar <span>*</span></label><select id="energyType" formControlName="energyType"><option value="Eletricidade">Eletricidade</option><option value="Gás">Gás</option><option value="Eletricidade e Gás">Eletricidade e gás</option></select></div></div>
+    <div class="form-field"><label for="contactPreference">Preferência de contacto <span>*</span></label><select id="contactPreference" formControlName="contactPreference"><option value="Email">Email</option><option value="Telefone">Telefone</option></select></div>
+    <div class="form-field"><label for="message">O que gostaria de analisar? <span>*</span></label><textarea id="message" rows="4" formControlName="message" placeholder="Conte-nos brevemente o que gostaria de esclarecer..." [attr.aria-invalid]="form.controls.message.touched && form.controls.message.invalid"></textarea>@if(form.controls.message.touched && form.controls.message.invalid){<small class="field-error">Escreva uma mensagem com pelo menos dez caracteres.</small>}</div>
+    <label class="form-privacy"><input type="checkbox" formControlName="consent"><span>Autorizo o tratamento dos dados fornecidos exclusivamente para resposta a este pedido de contacto. <a href="#privacidade">Informação sobre privacidade</a>. <strong>*</strong></span></label>@if(form.controls.consent.touched && form.controls.consent.invalid){<small class="field-error">É necessário autorizar o tratamento dos dados para enviar o pedido.</small>}
+    <div class="form-submit"><span>* Campos obrigatórios</span><button class="button button-submit" type="submit" [disabled]="submission() === 'sending'">{{submission() === 'sending' ? 'A enviar...' : 'Enviar pedido'}} <span aria-hidden="true">↗</span></button></div>
+    @if(submissionMessage()){<p class="form-status" [class.form-status-error]="submission() === 'error'" role="status" aria-live="polite">{{submissionMessage()}}</p>}
+  </form></div></div></section>
+
+  <section id="privacidade" class="privacy-note"><div><span>NOTA DE PRIVACIDADE</span><p>Os dados enviados através do formulário destinam-se à resposta ao pedido de análise. Esta versão de demonstração necessita de política de privacidade definitiva, identificação do responsável pelo tratamento e configuração do fornecedor de formulários antes de publicação.</p></div></section>
+</main>
+<footer class="footer"><div class="footer-upper" seReveal><div class="footer-identity"><a href="#inicio" class="brand footer-brand" aria-label="Sky Energy — voltar ao início"><span class="brand-emblem" aria-hidden="true"><svg viewBox="0 0 50 50" fill="none"><path d="M8 26.5 29 6l-4 17h17L21 45l5-18.5H8Z" fill="currentColor"/></svg></span><span class="brand-text"><strong>sky<span>energy</span></strong><small>ENERGIA COM CLAREZA</small></span></a><p>Uma leitura mais clara da energia que faz parte da sua vida.</p></div><div class="footer-navigation"><span>NAVEGAÇÃO</span><a href="#sobre">Sobre nós</a><a href="#servicos">Soluções</a><a href="#para-quem">Particulares e empresas</a><a href="#como-funciona">Como funciona</a><a href="#perguntas">Perguntas frequentes</a></div><div class="footer-contact"><span>PRÓXIMO PASSO</span><h3>Tem uma fatura<br>para analisar?</h3><a href="#pedir-analise">Pedir análise <span aria-hidden="true">↗</span></a></div></div><div class="footer-bottom"><span>© {{year}} Sky Energy. Todos os direitos reservados.</span><span>PROTÓTIPO DE REMODELAÇÃO · V1</span><a href="#inicio">VOLTAR AO INÍCIO ↑</a></div></footer>
+<a class="mobile-float" href="#pedir-analise">Pedir análise <span aria-hidden="true">↗</span></a>
