@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node ./node_modules/@angular/cli/bin/ng.js serve",
-    "build": "node ./node_modules/@angular/cli/bin/ng.js build --configuration production && node scripts/verify-netlify.mjs",
+    "build": "node ./node_modules/@angular/cli/bin/ng.js build --configuration production && node scripts/verify-netlify.mjs && node scripts/finalize-seo.mjs",
     "check": "tsc --noEmit -p tsconfig.app.json",
     "test": "node --experimental-strip-types --test scripts/*.test.mjs"
   },

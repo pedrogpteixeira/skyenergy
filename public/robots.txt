@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /
-# Protótipo V1: confirmar domínio, conteúdos e publicação antes de permitir indexação.
+Allow: /
